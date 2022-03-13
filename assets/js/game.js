@@ -1,10 +1,11 @@
 /* GAME FUNCTIONS */
 
+//functin to generate a random numeric value
+var randomNumber = function(min, max) {
+    var value = Math.floor(Math.random() * (max - min + 1) + min);
 
-console.log(enemyInfo.name);
-console.log(enemyInfo.name.length);
-console.log(enemyInfo.name[0]);
-console.log(enemyInfo.name[3]);
+    return value;
+};
 
 var fightOrSkip = function() {
     // ask player if they'd like to fight or run
@@ -34,6 +35,7 @@ var fightOrSkip = function() {
         return true
       }
     }
+    return false
 }
 
 // fight function (now with parameter for enemy's name)
@@ -250,12 +252,6 @@ switch (shopOptionPrompt) {
   }
 };
 
-//functin to generate a random numeric value
-var randomNumber = function(min, max) {
-    var value = Math.floor(Math.random() * (max - min + 1) + min);
-
-    return value;
-};
 
 
 // start the game when the page loads
